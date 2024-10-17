@@ -1,0 +1,138 @@
+@font-face {
+    font-family: RobotoRegular;
+    src: url('../resources/fonts/Roboto-Regular.ttf');
+}
+
+* {
+    font-family: RobotoRegular, serif;
+}
+
+
+.aside {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    max-width: 250px;
+    width: 100%;
+    border-right: 1px solid rgb(180, 180, 180);
+    padding-top: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    background-color: rgb(210, 209, 209);
+
+    -webkit-box-shadow: 9px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 9px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 9px 0px 8px 0px rgba(0, 0, 0, 0.2);
+
+    transition: .5s;
+}
+
+.aside.hide {
+    max-width: 10px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .aside {
+        max-width: 90%;
+    }
+}
+
+
+.arrow__button {
+    position: absolute;
+    z-index: 999;
+    width: 50px;
+    right: -35px;
+    height: 50px;
+    border-radius: 100%;
+    border: 1px solid rgb(180, 180, 180);
+    background-color: rgb(243, 243, 243);
+}
+
+.arrow__button:hover {
+    cursor: pointer;
+}
+
+.arrow__button__first,
+.arrow__button__second{
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: black;
+    transition: .3s;
+}
+
+.arrow__button__first {
+    top: 25%;
+    left: 45%;
+    transform: rotate(55deg);
+}
+.arrow__button__second{
+    top: 41%;
+    left: 45%; 
+    transform: rotate(-55deg);
+}
+
+.aside.hide .arrow__button__first {
+    transform: rotate(130deg);
+}
+.aside.hide .arrow__button__second {
+    top: 44%;
+    transform: rotate(45deg);
+}
+
+.logo {
+    user-select: none;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.logo.hide {
+    display: none;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: rgb(243, 243, 243);
+}
+
+
+.navigation_panel {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.navigation_panel ul {
+    margin-top: 40px;
+}
+
+.navigation_panel__point{
+    margin-top: 20px;
+    font-size: 16px;
+    text-wrap: nowrap;
+}
+
+.navigation_panel__point a{
+    color: black;
+    letter-spacing: 2px;
+}
+
+.navigation_panel__point a:hover {
+    border-bottom: 1px solid black;
+}
+
+
+.container {
+    padding-left: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+}
